@@ -30,6 +30,8 @@
       <div>{{url.string}}</div>
       <img src="{{url.qr}}">
     </div>
+    <textarea type="text" ng-change="FM.get_qr($event)" ng-model="FM.qr_text"></textarea>
+    <img src="{{(FM.qr_text)?FM.qr:''}}">
   </div>
 
 

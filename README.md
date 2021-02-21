@@ -13,6 +13,9 @@ see [github.com/bananaacid/node-file-manager-esm](https://github.com/bananaacid/
 # Show QR public IP
 ![Screenshot_2021-02-21_07-31-04](https://user-images.githubusercontent.com/6284869/108618521-f7c64200-7416-11eb-9785-acee87250a7d.png)
 
+# Generate QR from text
+![Screenshot_2021-02-21_07-46-59](https://user-images.githubusercontent.com/6284869/108618841-3bba4680-7419-11eb-804e-56c08232172e.png)
+
 
 # Install
 Requires Node >= v10.5
