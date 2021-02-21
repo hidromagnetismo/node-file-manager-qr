@@ -1,0 +1,18 @@
+#!/bin/bash
+
+cat <<EOF
+
+  [1] init
+  [2] search
+  [3] exit
+
+EOF
+
+
+read -p "> " -rsn1 option
+if [[ "$option" = "1" ]]; then
+    node ./bin/node-file-manager-esm.mjs -p 8080
+elif [[ "$option" = "2" ]]; then
+    echo Searching ...
+fi
+

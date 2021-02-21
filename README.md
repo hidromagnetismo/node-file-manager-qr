@@ -17,12 +17,17 @@ see [github.com/bananaacid/node-file-manager-esm](https://github.com/bananaacid/
 ![Screenshot_2021-02-21_07-46-59](https://user-images.githubusercontent.com/6284869/108618841-3bba4680-7419-11eb-804e-56c08232172e.png)
 
 
-# Install
+# Install on linux and termux
 Requires Node >= v10.5
 
 ```bash
 git clone https://github.com/hidromagnetismo/node-file-manager-qr.git && cd node-file-manager-qr && npm i && npm i --only=dev
-npx nodemon ./bin/node-file-manager-esm.mjs -p 8080 -d ./
+./init
 ```
+Select option 1
+2 in development with nmap
+
 go [http://localhost:8080](http://localhost:8080)
 
+
+# Install on Termux
