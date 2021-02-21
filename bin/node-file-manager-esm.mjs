@@ -29,6 +29,7 @@ import open from 'open';
 import optimist from 'optimist';
 import Tools from '../lib/tools.mjs';
 import IndexRouter from '../lib/routes.mjs';
+import Network from '../lib/network.mjs';
 
 const d = debug('fm:start');
 const dso = debug('fm:options');
@@ -160,5 +161,16 @@ if (!__dir_name) {
 
 
     startServer(app, +argv.port);
+
+    var ips = Network.ipAddresses();
+    var urls = [];
+
+    ips.map((ip, index) => {
+        urls.push(`Listen on: http://${ip}:${argv.port}`);
+    });
+
+    urls.forEach(url => {
+        console.log(url);
+    });
 
 })()
