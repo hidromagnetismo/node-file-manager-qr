@@ -10,6 +10,9 @@ see [github.com/bananaacid/node-file-manager-esm](https://github.com/bananaacid/
 # Show public IP in CLI
 ![Screenshot_2021-02-21_07-00-48](https://user-images.githubusercontent.com/6284869/108618145-981a6780-7413-11eb-97c0-1d602a0be617.png)
 
+# Show QR public IP
+![Screenshot_2021-02-21_07-31-04](https://user-images.githubusercontent.com/6284869/108618521-f7c64200-7416-11eb-9785-acee87250a7d.png)
+
 
 # Install
 Requires Node >= v10.5

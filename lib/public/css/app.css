@@ -90,3 +90,12 @@ input[type=checkbox]:checked::after {
 input[type=radio]:checked::after {
     content: "\f192"; /* dot-circle */
 }
+
+.qr_container {
+    width: 320px;
+    margin: auto;
+}
+
+.qr_container * {
+    width: 100%;
+}

@@ -23,6 +23,16 @@
 </head>
 
 <body ng-controller="FileManagerCtr as FM">
+
+
+  <div class="qr_container">
+    <div ng-repeat="url in FM.qr_urls">
+      <div>{{url.string}}</div>
+      <img src="{{url.qr}}">
+    </div>
+  </div>
+
+
   <div aria-live="polite" aria-atomic="true" style="position: relative;">
     <!-- Position it -->
     <div id="toast-container">
