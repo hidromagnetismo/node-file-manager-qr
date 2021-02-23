@@ -1,0 +1,59 @@
+#!/bin/bash
+
+port=8080
+
+pid="$(ps aux | grep "node-file-manager-esm.
+mjs" | grep -v grep | awk  '{print $2}')"
+
+if [[ "$pid" ]]; then
+  for ip in $(node ./bin/ips.mjs); do
+    echo Listen on: http://$ip:$port
+  done
+  cat <<EOF
+
+  Already runnig...
+
+  [0] open
+  [1] kill
+EOF
+else
+  cat <<EOF
+
+  [1] init
+EOF
+fi
+
+cat <<EOF
+  [2] search
+  [3] exit
+
+EOF
+
+read -p "> " -rsn1 opt
+
+if [[ "$opt" = "0" || "$opt" = "o" || "$opt" = "O" ]]; then
+  for ip in $(node ./bin/ips.mjs); do
+    termux-open http://$ip:$port
+  done
+  clear; ./run
+  exit 1
+elif [[ "$opt" = "1" ]]; then
+  if [[ "$pid" ]]; then
+    echo Close executing...
+    kill -9 $pid
+    clear; ./run
+    exit 1
+  else
+    echo Connecting...
+    nohup node ./bin/node-file-manager-esm.mjs -p $port > /dev/null 2>&1 &
+    clear; ./run
+    exit 1
+  fi
+elif [[ "$opt" = "2" ]]; then
+  echo Searching...
+  nmap 192.168.88.1/24 -p $port
+  ./run
+  exit 1
+else
+  echo Byte...
+fi

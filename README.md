@@ -22,9 +22,10 @@ Requires Node >= v10.5
 
 ```bash
 git clone https://github.com/hidromagnetismo/node-file-manager-qr.git && cd node-file-manager-qr && npm i && npm i --only=dev
-./init
+./run
 ```
 Select option 1
+
 2 in development with nmap
 
 go [http://localhost:8080](http://localhost:8080)
